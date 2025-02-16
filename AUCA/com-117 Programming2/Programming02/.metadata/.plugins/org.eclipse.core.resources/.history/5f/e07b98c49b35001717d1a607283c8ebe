@@ -1,0 +1,35 @@
+import java.util.*;
+
+public class NumberFreq {
+	static Scanner input = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		int t = input.nextInt();
+		int[] lst = new int[2000];
+		int[] count = new int[2000];
+		freq(t, lst, count);
+	}
+
+	private static void freq(int t, int[] lst, int[] count) {
+		int[] n = new int[t];
+		for (int i = 0; i < t; ++i) {
+			n[i] = input.nextInt();
+			for (int j = 0; j < lst.length; ++j) {
+				if (n[i] == j) {
+					++count[j];
+				}
+			}
+		}
+		Arrays.sort(n);
+		for (int i = 0; i < n.length; ++i) {
+			if (i > 0 && n[i] == n[i - 1]) {
+				while (n[i] == n[i - 1]) {
+					++i;
+				}
+				System.out.printf("%d aparece %d vez(es)\n", n[i], count[n[i]]);
+			} else {
+				System.out.printf("%d aparece %d vez(es)\n", n[i], count[n[i]]);
+			}
+		}
+	}
+}

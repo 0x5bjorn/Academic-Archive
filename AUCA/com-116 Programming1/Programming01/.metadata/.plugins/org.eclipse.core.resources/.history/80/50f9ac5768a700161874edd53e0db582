@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class Problem1079 {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner input = new Scanner(System.in);
+		int n = input.nextInt();
+		n*=3;
+		int a = 0;
+		double[] list = {0, 0, 0};
+		double[] list1 = {0, 0, 0};
+		double[] list2 = {0, 0, 0};
+		for (double i: list) {
+			while (a<n) {
+				double n1 = input.nextDouble();
+				
+			}
+		}
+		for (double i: list1) {
+			while (a<n) {
+				double n1 = input.nextDouble();
+			}
+		}
+		for (double i: list2) {
+			while (a<n) {
+				double n1 = input.nextDouble();
+			}
+		}
+	}
+}

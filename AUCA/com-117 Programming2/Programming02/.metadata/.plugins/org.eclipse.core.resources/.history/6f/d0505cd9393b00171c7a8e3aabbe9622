@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Console {
+
+	public static void main(String[] args) {
+		Puzzle puzzle = new Puzzle();
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("15 puzzle:");
+		puzzle.print();
+
+		System.out.print("Number of moves for shuffle? ");
+		int shfl = input.nextInt();
+		puzzle.shuffle(shfl);
+		puzzle.print();
+
+		while (!(puzzle.solved())) {
+			System.out.println();
+			System.out.print("Your move (W, D, S, A): ");
+			String move = input.next();
+			puzzle.move(move);
+			puzzle.print();
+		}
+	}
+}

@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class Problem1101 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int a = input.nextInt();
+		int b = input.nextInt();
+		int total = 0;
+		int n = 0;
+		if (a > b) {
+			n += b;
+			while (n >= b && n <= a) {
+				System.out.print(n + " ");
+				++n;
+				total += n;
+			}
+		} else if (b > a) {
+			n += a;
+			while (n >= a && n <= b) {
+				System.out.print(n + " ");
+				++n;
+				total += n;
+			}
+		}
+		System.out.printf("Sum=%d", total);
+	}
+}

@@ -1,0 +1,14 @@
+
+public class Project01 {
+
+	public static void main(String[] args) {
+		try {
+			BigInt a = new BigInt("2317");
+			BigInt b = new BigInt("8967");
+
+			System.out.println(a.add(b));
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+}

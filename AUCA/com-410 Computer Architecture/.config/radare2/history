@@ -1,0 +1,20 @@
+vim
+q
+L
+-L
+-W
+-A
+af
+afi
+d, f
+f:
+f
+V
+radiff2 -g main 07
+r2
+-I
+:q
+q
+aaaa
+VV
+q

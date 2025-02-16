@@ -1,0 +1,10 @@
+force d0 10#1 0ns, 10#0 100ns;
+force d1 10#0 0ns, 10#1 100ns, , 10#0 200ns;
+force d2 10#0 0ns, 10#1 200ns, , 10#0 300ns;
+force d3 10#0 0ns, 10#1 300ns, , 10#0 400ns;
+force d4 10#0 0ns, 10#1 400ns, , 10#0 500ns;
+force d5 10#0 0ns, 10#1 500ns, , 10#0 600ns;
+force d6 10#0 0ns, 10#1 600ns, , 10#0 700ns;
+force d7 10#0 0ns, 10#1 700ns, , 10#0 800ns;
+force d8 10#0 0ns, 10#1 800ns, , 10#0 900ns;
+force d9 10#0 0ns, 10#1 900ns, , 10#0 1000ns;

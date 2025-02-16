@@ -1,0 +1,16 @@
+/etc/init.d/networking restart
+
+echo -e '\n\n\n' | ssh-keygen
+pwd
+cp /root/.ssh/id_rsa.pub /shared/pc4_id_rsa.pub
+
+touch /root/.ssh/known_hosts
+printf "%s" "Waiting for OSPF..."
+while ! ping -c1 192.168.1.2 &> /dev/null
+do
+    printf "%s" "."
+    sleep 1
+done
+printf "\n%s\n"  "Done!"
+ssh-keyscan -t rsa 192.168.1.2 > /root/.ssh/known_hosts
+ssh -4 -vNL 9000:192.168.1.2:8080 ssh_user@192.168.1.2 &

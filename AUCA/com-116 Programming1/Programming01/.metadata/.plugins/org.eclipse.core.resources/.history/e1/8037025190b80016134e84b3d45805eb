@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class Problem1151 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int a = input.nextInt();;
+		int b = 0;
+		int fac = 0;
+		while (b<a) {
+			++b;
+			fac += a;
+			a-=b;
+		}
+		System.out.println(fac);
+	}
+}

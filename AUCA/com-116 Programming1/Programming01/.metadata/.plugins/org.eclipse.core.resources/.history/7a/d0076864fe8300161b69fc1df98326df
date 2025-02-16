@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class Problem1005 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+        int A = input.nextInt();
+        int B = input.nextInt();
+        int MEDIA = (A + B)/2;
+        System.out.println("MEDIA = " + MEDIA);
+
+	}
+
+}

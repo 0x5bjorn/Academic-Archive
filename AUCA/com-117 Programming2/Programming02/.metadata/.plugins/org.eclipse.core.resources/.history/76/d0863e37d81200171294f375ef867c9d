@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class InternationalChat {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String a = input.nextLine();
+		int a1 = Integer.parseInt(a);
+		for (int i = 0; i < a1; ++i) {
+			String b = input.nextLine();
+			int b1 = Integer.parseInt(b);
+			String[] arr = new String[b1];
+			for (int j = 0; j < b1; ++j) {
+				arr[j] = input.nextLine();
+			}
+			String l = arr[0];
+			int n = 0;
+			for (int j = 0; j < b1; ++j) {
+				if (arr[i].equals(l)) {
+					n++;
+				}
+			}
+			if (n==arr.length) {
+				System.out.println(arr[i]);
+			} else {
+				System.out.println("ingles");
+			}
+		}
+	}
+}

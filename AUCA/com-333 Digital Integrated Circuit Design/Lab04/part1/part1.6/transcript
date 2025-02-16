@@ -1,0 +1,214 @@
+# Loading project part1.6
+# Compile of part16.v failed with 6 errors.
+# Load canceled
+# Compile of part16.v failed with 2 errors.
+# Compile of part16.v was successful.
+vsim work.part16
+# vsim work.part16 
+# Start time: 16:09:33 on May 03,2020
+# Loading work.part16
+quit -sim
+# End time: 16:09:41 on May 03,2020, Elapsed time: 0:00:08
+# Errors: 0, Warnings: 0
+vsim work.part16 -t ps
+# vsim work.part16 -t ps 
+# Start time: 16:09:47 on May 03,2020
+# Loading work.part16
+add wave sim:/part16/*
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.6/Stim.do}
+# ** Error: Invalid binary digit: 2.
+# ** Error: (vsim-4011) Invalid force value: 1 0ns, 2 400ns, 3 500ns.
+# Error in macro /home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.6/Stim.do line 6
+# Invalid binary digit: 2.
+# ** Error: (vsim-4011) Invalid force value: 1 0ns, 2 400ns, 3 500ns.
+# 
+#     while executing
+# "force d 1 0ns, 2 400ns, 3 500ns"
+run 1000ms
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# Break key hit
+# Simulation stop requested.
+quit -sim
+# End time: 16:10:27 on May 03,2020, Elapsed time: 0:00:40
+# Errors: 2, Warnings: 1
+vsim -t ps work.part16
+# vsim -t ps work.part16 
+# Start time: 16:10:35 on May 03,2020
+# Loading work.part16
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.6/Stim.do}
+# ** Error: Invalid binary digit: 2.
+# ** Error: (vsim-4011) Invalid force value: 1 0ns, 2 400ns, 3 500ns.
+# Error in macro /home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.6/Stim.do line 6
+# Invalid binary digit: 2.
+# ** Error: (vsim-4011) Invalid force value: 1 0ns, 2 400ns, 3 500ns.
+# 
+#     while executing
+# "force d 1 0ns, 2 400ns, 3 500ns"
+run 1000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+add wave sim:/part16/*
+run 1000ns
+restart -f
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.6/Stim.do}
+# ** Error: Invalid binary digit: 2.
+# ** Error: (vsim-4011) Invalid force value: 1 0ns, 2 400ns, 3 500ns.
+# Error in macro /home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.6/Stim.do line 6
+# Invalid binary digit: 2.
+# ** Error: (vsim-4011) Invalid force value: 1 0ns, 2 400ns, 3 500ns.
+# 
+#     while executing
+# "force d 1 0ns, 2 400ns, 3 500ns"
+run 1000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+add wave -position end  sim:/part16/mem
+restart -f
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.6/Stim.do}
+run 1000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# Compile of part16.v was successful.
+restart -f
+# Loading work.part16
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.6/Stim.do}
+run 1000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+restart -f
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.6/Stim.do}
+run 1000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+quit -sim
+# End time: 16:41:01 on May 03,2020, Elapsed time: 0:30:26
+# Errors: 4, Warnings: 5
+# reading /home/tyto5/intelFPGA_lite/19.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project part2.1
+# Compile of part21.v was successful.
+vsim -t ps work.part21
+# vsim -t ps work.part21 
+# Start time: 17:28:48 on May 03,2020
+# Loading work.part21
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part2/part2.1/Stim.do}
+add wave sim:/part21/*
+run 1000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+restart -f
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part2/part2.1/Stim.do}
+run 1000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+run 200ns
+restart -f
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part2/part2.1/Stim.do}
+run 1200ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+quit -sim
+# End time: 17:39:33 on May 03,2020, Elapsed time: 0:10:45
+# Errors: 0, Warnings: 3
+# reading /home/tyto5/intelFPGA_lite/19.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project part2.2
+# Compile of part22.v was successful.
+vsim -t ps work.part21
+# vsim -t ps work.part21 
+# Start time: 17:49:37 on May 03,2020
+# Loading work.part21
+add wave sim:/part21/*
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part2/part2.2/Stim.do}
+run 1200ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# Compile of part22.v was successful.
+quit -sim
+# End time: 17:52:20 on May 03,2020, Elapsed time: 0:02:43
+# Errors: 0, Warnings: 1
+# reading /home/tyto5/intelFPGA_lite/19.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Load canceled
+# Loading project part2.2
+# Compile of part22.v was successful.
+# reading /home/tyto5/intelFPGA_lite/19.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project part2.3
+# Compile of part23.v was successful.
+vsim -t ps work.part23
+# vsim -t ps work.part23 
+# Start time: 18:23:21 on May 03,2020
+# Loading work.part23
+add wave sim:/part23/*
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part2/part2.3/Stim.do}
+run 2000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# Compile of part23.v was successful with warnings.
+restart -f
+# Loading work.part23
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part2/part2.3/Stim.do}
+run 2000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# Compile of part23.v was successful.
+restart -f
+# Loading work.part23
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part2/part2.3/Stim.do}
+run 2000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# Compile of part23.v was successful.
+# Compile of part23.v was successful.
+restart -f
+# Loading work.part23
+# Warning in wave window restart: (vish-4014) No objects found matching '/part23/temp'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/part23/i'. 
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part2/part2.3/Stim.do}
+run 2000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# Compile of part23.v was successful.
+# Compile of part23.v was successful.
+restart -f
+# Loading work.part23
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part2/part2.3/Stim.do}
+run 2000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+quit -sim
+# End time: 21:50:11 on May 03,2020, Elapsed time: 3:26:50
+# Errors: 2, Warnings: 5
+# reading /home/tyto5/intelFPGA_lite/19.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project part2.4
+# Compile of part24.v was successful.
+vsim -t ps work.part24
+# vsim -t ps work.part24 
+# Start time: 21:55:16 on May 03,2020
+# Loading work.part24
+add wave sim:/part24/*
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part2/part2.4/Stim.do}
+run 1000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# Compile of part24.v failed with 1 errors.
+restart -f
+# Compile of part24.v failed with 1 errors.
+# Compile of part24.v was successful.
+restart -f
+# Loading work.part24
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part2/part2.4/Stim.do}
+run 1000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# Compile of part24.v was successful.
+restart -f
+# Loading work.part24
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part2/part2.4/Stim.do}
+run 1000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# Compile of part24.v failed with 2 errors.
+# Compile of part24.v failed with 2 errors.
+# Compile of part24.v failed with 1 errors.
+restart -f
+# Compile of part24.v failed with 1 errors.
+# Compile of part24.v failed with 1 errors.
+# Compile of part24.v failed with 1 errors.
+restart -f
+# Compile of part24.v failed with 1 errors.
+# Compile of part24.v failed with 1 errors.
+# Compile of part24.v failed with 2 errors.
+# Compile of part24.v failed with 1 errors.
+# Compile of part24.v failed with 1 errors.
+# Compile of part24.v was successful.
+restart -f
+# Loading work.part24
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part2/part2.4/Stim.do}
+run 1000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+quit -sim
+# End time: 22:15:24 on May 03,2020, Elapsed time: 0:20:08
+# Errors: 0, Warnings: 4
+# reading /home/tyto5/intelFPGA_lite/19.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project part2.5

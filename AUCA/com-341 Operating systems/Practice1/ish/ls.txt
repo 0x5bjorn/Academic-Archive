@@ -1,0 +1,16 @@
+ish
+ish.c
+ish_common.h
+ish_cstring_utilities.c
+ish_cstring_utilities.h
+ish_cstring_utilities.o
+ish.o
+ish_shell_utilities.c
+ish_shell_utilities.h
+ish_shell_utilities.o
+ish_syscalls.c
+ish_syscalls.h
+ish_syscalls.o
+ls.txt
+Makefile
+Readme.md

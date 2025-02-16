@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;Lab07Problem01/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;Lab03Problem01&apos;&#x0D;&#x0A;- Destination element: &apos;Lab07Problem01/src/(default package)&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Rational.java&#x0D;&#x0A;     MyMath.java" description="Copy compilation units" destination="=Lab07Problem01/src&lt;" element1="/src&lt;{Rational.java" element2="/src&lt;{MyMath.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1493882165107" units="2" version="1.0"/>
+</session>

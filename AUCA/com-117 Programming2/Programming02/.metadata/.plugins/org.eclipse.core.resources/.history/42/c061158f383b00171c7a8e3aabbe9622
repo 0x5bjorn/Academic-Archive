@@ -1,0 +1,13 @@
+import java.util.*;
+
+public class Console {
+
+	public static void main(String[] args) {
+		Puzzle puzzle = new Puzzle();
+		Scanner input = new Scanner(System.in);
+		System.out.print("Number of moves for shuffle? ");
+		int shfl = input.nextInt();
+		puzzle.print();
+	}
+
+}

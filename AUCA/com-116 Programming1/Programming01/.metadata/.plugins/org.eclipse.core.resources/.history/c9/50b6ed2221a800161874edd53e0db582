@@ -1,0 +1,11 @@
+import java.util.*;
+
+public class Problem1080 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int n = input.nextInt();
+		int b = 23 * 3 % 2;
+		System.out.println(b);
+	}
+}

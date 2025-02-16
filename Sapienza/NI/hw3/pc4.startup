@@ -1,0 +1,4 @@
+/etc/init.d/networking restart
+/etc/init.d/apache2 restart
+
+echo "nameserver 1.0.1.13" > /etc/resolv.conf

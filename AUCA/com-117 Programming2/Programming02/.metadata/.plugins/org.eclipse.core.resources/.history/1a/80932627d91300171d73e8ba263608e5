@@ -1,0 +1,35 @@
+import java.util.*;
+
+public class ArrayHash {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String a = input.nextLine();
+		int a1 = Integer.parseInt(a);
+
+		for (int i = 0; i < a1; ++i) {
+			int b = input.nextInt();
+			String[] arr = new String[b];
+			for (int j = 0; j < b; j++) {
+				arr[j] = input.nextLine();
+			}
+			count(b, arr);
+		}
+	}
+
+	static void count(int b, String[] arr) {
+		String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		char[] alph = alphabet.toCharArray();
+		int result = 0;
+		for (int i = 0; i < b; ++i) {
+			char[] chr = arr[i].toCharArray();
+			for (int j = 0; j < chr.length; ++j) {
+				for (int k = 0; k < alph.length; ++k) {
+					if (chr[j] == alph[k]) {
+						result += (k + j + i);
+					}
+				}
+			}
+		}
+		System.out.println(result);
+	}
+}

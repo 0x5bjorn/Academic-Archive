@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+			Scanner input = new Scanner(System.in);
+			int number = input.nextInt();
+			int hoursnumber = input.nextInt();
+			double perhour = input.nextDouble();
+			double salary = hoursnumber * perhour;
+			System.out.printf("NUMBER = %d", number);
+			System.out.printf("SALARY = U$ %f", salary)
+			
+
+	}
+
+}

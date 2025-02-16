@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Sum&apos; to &apos;Calculator&apos;&#x0D;&#x0A;- Original project: &apos;Lab01Problem04&apos;&#x0D;&#x0A;- Original element: &apos;Sum&apos;&#x0D;&#x0A;- Renamed element: &apos;Calculator&apos;&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Sum&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{Sum.java[Sum" matchStrategy="1" name="Calculator" qualified="false" references="false" similarDeclarations="false" stamp="1474011890896" textual="false" version="1.0"/>
+</session>

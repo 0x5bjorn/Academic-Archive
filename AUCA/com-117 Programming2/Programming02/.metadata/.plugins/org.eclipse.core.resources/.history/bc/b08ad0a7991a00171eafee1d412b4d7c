@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class BigInt {
+	private ArrayList<Integer> digits;
+
+	public BigInt(String number) {
+		digits = new ArrayList<Integer>();
+		for (int i = 0; i < number.length(); ++i) {
+			char c = number.charAt(i);
+			digits.add(c - '0');
+			//digits.add(Integer.parseInt(substring(i, i+1)));
+		}
+	}
+}

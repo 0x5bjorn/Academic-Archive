@@ -1,0 +1,199 @@
+# Loading project part1.2
+# reading /home/tyto5/intelFPGA_lite/19.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project part1.4
+# Compile of part14.v was successful.
+# Load canceled
+# Compile of part14.v was successful.
+vsim work.part12
+# vsim work.part12 
+# Start time: 16:05:08 on May 02,2020
+# Loading work.part12
+quit -sim
+# Load canceled
+# End time: 16:05:21 on May 02,2020, Elapsed time: 0:00:13
+# Errors: 0, Warnings: 0
+# Compile of part14.v was successful.
+# Load canceled
+# Compile of part14.v was successful.
+# Compile of part14.v was successful.
+vsim work.part14 -t ps
+# vsim work.part14 -t ps 
+# Start time: 16:06:18 on May 02,2020
+# Loading work.part14
+add wave sim:/part14/*
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.4/Stim.do}
+# ** Error: (vsim-4007) A value argument is required.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# Error in macro /home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.4/Stim.do line 4
+# ** Error: (vsim-4007) A value argument is required.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+#     while executing
+# "force d 10#1 0ns, 10#3 400ns, 10#6 800ns,"
+run 1000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+restart -f
+# Compile of part14.v was successful.
+restart -f
+# Loading work.part14
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.4/Stim.do}
+run 1000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+restart -f
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.4/Stim.do}
+run 1800ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+restart -f
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.4/Stim.do}
+run 3000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# Compile of part14.v was successful.
+restart -f
+# Loading work.part14
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.4/Stim.do}
+run 3000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# Compile of part14.v was successful.
+restart -f
+# Loading work.part14
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.4/Stim.do}
+# ** Error: Invalid binary digit: 3.
+# ** Error: (vsim-4011) Invalid force value: 3 0ns.
+# Error in macro /home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.4/Stim.do line 5
+# Invalid binary digit: 3.
+# ** Error: (vsim-4011) Invalid force value: 3 0ns.
+# 
+#     while executing
+# "force step 3 0ns"
+run 3000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# Compile of part14.v was successful.
+restart -f
+# Loading work.part14
+add wave sim:/part14/*
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.4/Stim.do}
+# ** Error: Invalid binary digit: 3.
+# ** Error: (vsim-4011) Invalid force value: 3 0ns.
+# Error in macro /home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.4/Stim.do line 5
+# Invalid binary digit: 3.
+# ** Error: (vsim-4011) Invalid force value: 3 0ns.
+# 
+#     while executing
+# "force step 3 0ns"
+run 3000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# Compile of part14.v was successful.
+restart -f
+# Loading work.part14
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.4/Stim.do}
+run 3000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# Compile of part14.v was successful.
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.4/Stim.do}
+run 3000ns
+# Compile of part14.v was successful.
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.4/Stim.do}
+run 3000ns
+# Compile of part14.v was successful.
+restart -f
+# Loading work.part14
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.4/Stim.do}
+run 3000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+quit -sim
+# End time: 16:52:50 on May 02,2020, Elapsed time: 0:46:32
+# Errors: 6, Warnings: 9
+# reading /home/tyto5/intelFPGA_lite/19.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project part1.3
+# Compile of part13.v was successful.
+# Compile of part13.v was successful.
+vsim -t ps work.part13
+# vsim -t ps work.part13 
+# Start time: 17:11:33 on May 02,2020
+# Loading work.part13
+add wave sim:/part13/*
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.3/Stim.do}
+run 3000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+restart -f
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.3/Stim.do}
+run 3000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# Compile of part13.v was successful.
+restart -f
+# Loading work.part13
+# Warning in wave window restart: (vish-4014) No objects found matching '/part13/temp'. 
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.3/Stim.do}
+add wave sim:/part13/*
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.3/Stim.do}
+run 3000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+quit -sim
+# End time: 17:35:23 on May 02,2020, Elapsed time: 0:23:50
+# Errors: 1, Warnings: 3
+# reading /home/tyto5/intelFPGA_lite/19.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project part1.5
+# Compile of part15.v was successful.
+vsim -t ps work.part15
+# vsim -t ps work.part15 
+# Start time: 22:15:31 on May 02,2020
+# Loading work.part15
+add wave sim:/part15/*
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.5/Stim.do}
+# ** Error: (vsim-4007) A value argument is required.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# Error in macro /home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.5/Stim.do line 4
+# ** Error: (vsim-4007) A value argument is required.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+#     while executing
+# "force wr 0 0ns, 1 100ns, 0 200ns, 1 300ns, 0 400ns, 1 500ns, 0 900ns, 1 1000ns, 0 1100ns, 1 1200ns, 0 1300ns, 1 1400ns, 0 1500ns, 1 1600ns, 0 1700ns, ..."
+run 2000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+restart -f
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.5/Stim.do}
+# ** Error: (vsim-4007) A value argument is required.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# Error in macro /home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.5/Stim.do line 4
+# ** Error: (vsim-4007) A value argument is required.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+#     while executing
+# "force wr 2#0 0ns, 2#1 100ns, 2#0 200ns, 2#1 300ns, 2#0 400ns, 2#1 500ns, 2#0 900ns, 2#1 1000ns, 2#0 1100ns, 2#1 1200ns, 2#0 1300ns, 2#1 1400ns, 2#0 15..."
+run 2000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+restart -f
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.5/Stim.do}
+run 2000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+add wave -position 8  sim:/part15/mem
+restart -f
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.5/Stim.do}
+# ** Error: (vsim-4007) A value argument is required.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# Error in macro /home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.5/Stim.do line 3
+# ** Error: (vsim-4007) A value argument is required.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+#     while executing
+# "force rd 0 0ns, 1 600ns, 0 700ns, 1 800ns, 0 900ns,"
+run 2000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+restart -f
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.5/Stim.do}
+run 2000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+restart -f
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.5/Stim.do}
+run 2000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+restart -f
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.5/Stim.do}
+run 2000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+restart -f
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab04/part1/part1.5/Stim.do}
+run 2000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+quit -sim
+# End time: 22:30:01 on May 02,2020, Elapsed time: 0:14:30
+# Errors: 6, Warnings: 8
+# reading /home/tyto5/intelFPGA_lite/19.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project part1.6
+# Quit canceled

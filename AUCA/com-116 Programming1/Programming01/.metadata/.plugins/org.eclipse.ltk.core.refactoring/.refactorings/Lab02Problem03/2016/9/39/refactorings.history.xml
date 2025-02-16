@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;SumOfDigits&apos; to &apos;DigitCalculator&apos;&#x0D;&#x0A;- Original project: &apos;Lab02Problem03&apos;&#x0D;&#x0A;- Original element: &apos;SumOfDigits&apos;&#x0D;&#x0A;- Renamed element: &apos;DigitCalculator&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;SumOfDigits&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{SumOfDigits.java[SumOfDigits" matchStrategy="1" name="DigitCalculator" qualified="false" references="true" similarDeclarations="false" stamp="1474616126422" textual="false" version="1.0"/>
+</session>

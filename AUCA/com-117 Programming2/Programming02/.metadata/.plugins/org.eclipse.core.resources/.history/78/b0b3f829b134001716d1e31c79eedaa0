@@ -1,0 +1,129 @@
+import java.util.*;
+
+public class BigInt {
+	private ArrayList<Integer> digits;
+	private boolean neg = false;
+
+	public BigInt(String number) throws Exception {
+		digits = new ArrayList<Integer>();
+		for (int i = 0; i < number.length(); ++i) {
+			char c = number.charAt(i);
+
+			if (c=='-') {
+				neg = true;
+			}
+			
+			if (!(Character.isDigit(c))) { // !(Character.parseInt(number)) or c
+											// < '0' || c > '9'
+				throw new Exception("incorrect BigInt: " + number);
+			}
+			digits.add(c - '0');
+			// digits.add(Integer.parseInt(substring(i, i+1)));
+		}
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder r = new StringBuilder();
+		for (Integer d : digits) {
+			r.append(d);
+		}
+		return r.toString();
+	}
+
+	public BigInt add(BigInt other) throws Exception {
+		BigInt r = new BigInt("0");
+		r.digits.remove(0);
+
+		int i = digits.size() - 1;
+		int j = other.digits.size() - 1;
+
+		int carry = 0;
+		while (i > -1 || j > -1 || carry != 0) {
+			int s = carry;
+			if (i > -1) {
+				s += digits.get(i);
+				--i;
+			}
+			if (j > -1) {
+				s += other.digits.get(j);
+				--j;
+			}
+			carry = s / 10;
+			int d = s % 10;
+			r.digits.add(0, d);
+		}
+		return r;
+	}
+
+	public BigInt substract(BigInt other) throws Exception {
+		BigInt r = new BigInt("0");
+		r.digits.remove(0);
+
+		int i = digits.size() - 1;
+		int j = other.digits.size() - 1;
+
+		int c = compareTo(other);
+
+		if (c==1 || c==0) {
+			int carry = 0;
+			while (i > -1) {
+				int s = 0;
+				s -= carry;
+				carry = 0;
+//				if (i > -1) {
+//					s += next;
+//					--i;
+//				}
+//				if (j > -1) {
+//					s -= other.digits.get(j);
+//					--j;
+//				}
+				if (i > -1) {
+					if (other.digits.get(j) > digits.get(i)) {
+						s += 10 - other.digits.get(j) + digits.get(i);
+						--i;
+						--j;
+						carry++;
+					} else if (other.digits.get(j) <= digits.get(i)) {
+						s += digits.get(i) - other.digits.get(j);
+						--i;
+						--j;
+					}
+				}
+				int d = s % 10;
+				r.digits.add(0, d);
+			}
+			while (r.digits.get(0) == 0) {
+				r.digits.remove(0);
+			}
+		}
+		return r;
+	}
+
+	public int compareTo(BigInt other) throws Exception {
+		int i = 0;
+		int r = 0;
+
+		if (digits.size() > other.digits.size()) {
+			r = 0;
+		} else if (digits.size() < other.digits.size()) {
+			r = -1;
+		} else if (digits.size() == other.digits.size()) {
+			while (true) {
+				if (digits.get(i) > other.digits.get(i)) {
+					r = 1;
+					break;
+				} else if (digits.get(i) < other.digits.get(i)) {
+					r = -1;
+					break;
+				} else if (digits.get(i) == other.digits.get(i)) {
+					r = 0;
+					break;
+				}
+				++i;
+			}
+		}
+		return r;
+	}
+}

@@ -1,0 +1,49 @@
+# Loading project part2.5
+# reading /home/tyto5/intelFPGA_lite/19.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project Lab01
+vsim work.mult_acc
+# vsim work.mult_acc 
+# Start time: 12:57:04 on May 06,2020
+# Loading work.mult_acc
+quit -sim
+# End time: 12:57:10 on May 06,2020, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 0
+vsim work.mult_acc -t ps
+# vsim work.mult_acc -t ps 
+# Start time: 12:57:21 on May 06,2020
+# Loading work.mult_acc
+add wave sim:/mult_acc/*
+:3B 700BK
+# invalid command name ":3B"
+run 700ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# Compile of mult_acc.v was successful.
+restart -f
+# Loading work.mult_acc
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab01/Stim.do}
+run 700ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+add wave -position end  sim:/mult_acc/out
+add wave -position end  sim:/mult_acc/adder_out
+add wave -position end  sim:/mult_acc/mult_out
+restart -f
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab01/Stim.do}
+run 700ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# End time: 13:49:15 on May 06,2020, Elapsed time: 0:51:54
+# Errors: 1, Warnings: 3
+# Closing project /home/tyto5/tyto/Courses/com-333 DICD/Lab01/Lab01.mpf
+# reading /home/tyto5/intelFPGA_lite/19.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project part1.1
+# reading /home/tyto5/intelFPGA_lite/19.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project part1.1
+vsim -t ps work.part11
+# vsim -t ps work.part11 
+# Start time: 13:49:43 on May 06,2020
+# Loading work.part11
+add wave sim:/part11/*
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab03/part1/part1.1/Stim.do}
+run 1000ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# End time: 14:03:39 on May 06,2020, Elapsed time: 0:13:56
+# Errors: 0, Warnings: 1

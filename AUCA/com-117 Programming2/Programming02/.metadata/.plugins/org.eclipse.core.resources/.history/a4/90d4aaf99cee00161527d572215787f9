@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class Lab02Problem01 {
+
+	public static void main(String[] args) {
+		Field f = new Field(10, 10);
+		Turtle t = new Turtle(0, 0, 0, false, f);
+		t.penDown();
+		t.move(5);
+		t.turnRight();
+		t.move(5);
+		t.turnRight();
+		t.move(5);
+		t.turnRight();
+		t.move(5);
+		t.turnRight();
+		
+		f.show();
+	}
+}

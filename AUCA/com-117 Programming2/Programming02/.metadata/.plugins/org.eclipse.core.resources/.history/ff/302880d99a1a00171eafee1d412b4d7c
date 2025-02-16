@@ -1,0 +1,14 @@
+
+public class Project01 {
+
+	public static void main(String[] args) {
+		try {
+			BigInt a = new BigInt("200000000000000000000000");
+			BigInt b = new BigInt("200000000000000000000001");
+
+			System.out.println(a);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+}

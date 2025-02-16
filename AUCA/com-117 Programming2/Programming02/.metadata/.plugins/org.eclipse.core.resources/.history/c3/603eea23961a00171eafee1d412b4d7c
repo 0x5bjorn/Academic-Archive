@@ -1,0 +1,10 @@
+
+public class Project01 {
+
+	public static void main(String[] args) {
+		int a = 2000000000;
+		int b = 2000000000;
+		System.out.println(a+b);
+	}
+
+}

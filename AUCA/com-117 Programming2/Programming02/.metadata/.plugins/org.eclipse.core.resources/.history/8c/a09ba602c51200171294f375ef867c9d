@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class ShortAtten {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String a = input.nextLine();
+		int a1 = Integer.parseInt(a);
+		for (int i = 0; i < a1; ++i) {
+			String b = input.nextLine();
+			int b1 = Integer.parseInt(b);
+			for (int j = 0; j < b1; ++j) {
+				String n = input.nextLine();
+				String m = input.nextLine();
+				check(m, n);
+			}
+		}
+	}
+
+	static void check(String m, String n) {
+		int p = 0;
+		int a = 0;
+		for (int i = 0; i < m.length(); ++i) {
+			int s = m.indexOf(' ', i);
+			int len = m.substring(i, s).length();
+			for (int j = 0; j < len; ++j) {
+				char c = m.charAt(i);
+				if (c == 'P') {
+					p++;
+				} else if (c == 'M') {
+					len--;
+				} else {
+					a++;
+				}
+			}
+			int k = 0;
+			int aver = p*100/len;
+			int t = n.indexOf(' ', k);
+			int f = n.substring(k, t).length();
+			if (aver<75) {
+				System.out.println(n.substring(k, t));
+			} else {
+				System.out.println("");
+			}
+			i=len;
+			k=f;
+		}
+	}
+}

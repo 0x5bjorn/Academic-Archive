@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class Problem1079 {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner input = new Scanner(System.in);
+		int n = input.nextInt();
+		n*=3;
+		int a = 0;
+		double q = 0;
+		double w = 0;
+		double e = 0;
+		while (a<n) {
+			double n1 = input.nextDouble();
+			q = n1*2;
+			w = n1*3;
+			e = n1*5;
+			double aver = (q+w+e)/10;
+			System.out.println(aver);
+		}
+	}
+}

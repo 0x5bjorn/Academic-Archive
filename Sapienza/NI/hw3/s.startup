@@ -1,0 +1,36 @@
+/etc/init.d/networking restart
+/etc/init.d/ssh restart
+/etc/init.d/bind restart
+
+mkdir /home/exam_user
+useradd exam_user -d /home/exam_user
+chown exam_user:exam_user /home/exam_user
+echo -e 'exam\nexam\n' | passwd exam_user
+mkdir /home/exam_user/.ssh
+chown exam_user:exam_user /home/exam_user/.ssh
+chmod 700 /home/exam_user/.ssh
+touch /home/exam_user/.ssh/authorized_keys
+chown exam_user:exam_user /home/exam_user/.ssh/authorized_keys
+chmod 600 /home/exam_user/.ssh/authorized_keys
+if [ -e /shared/id_rsa.pub ]
+then
+	cat /shared/id_rsa.pub > /home/exam_user/.ssh/authorized_keys
+else
+	sleep 1
+fi
+
+mkdir -p /dev/net
+mknod /dev/net/tun c 10 200
+chmod 600 /dev/net/tun
+
+cp /shared/keys/client.* /root
+cp /shared/keys/ca.crt /root
+
+while ! ping -c1 192.168.1.2 &> /dev/null
+do
+    printf "%s" "."
+    sleep 1
+done
+printf "\n%s\n"  "Done!"
+
+openvpn /root/client.conf &

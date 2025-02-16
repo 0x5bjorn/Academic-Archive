@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class Problem1098 {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		for (double i=0, j=1, a=3; i<3; i+=0.2, j+=0.2, a+=0.4) {
+			while (j<=a) {
+				System.out.printf("I=%.1f J=%.1f\n", i, j);
+				++j;
+			}
+		}
+	}
+}

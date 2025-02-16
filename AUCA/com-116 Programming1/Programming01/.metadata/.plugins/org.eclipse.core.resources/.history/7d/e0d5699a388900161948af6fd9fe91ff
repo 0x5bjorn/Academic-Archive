@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+			Scanner input = new Scanner(System.in);
+			double[] fsalary = input.nextDouble();
+			double msalary = input.nextDouble();
+			double total = fsalary + (msalary * 15 / 100);
+			System.out.printf("VALOR A PAGAR: R$ %.2f\n", total);
+			
+
+	}
+
+}

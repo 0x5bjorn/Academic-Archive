@@ -1,0 +1,19 @@
+/etc/init.d/networking restart
+/etc/init.d/ssh restart
+
+echo "nameserver 1.0.1.13" > /etc/resolv.conf
+
+echo -e '\n\n\n' | ssh-keygen
+pwd
+cp /root/.ssh/id_rsa.pub /shared
+
+touch /root/.ssh/known_hosts
+printf "%s" "Waiting for OSPF..."
+while ! ping -c1 1.0.1.13 &> /dev/null
+do
+    printf "%s" "."
+    sleep 1
+done
+printf "\n%s\n"  "Done!"
+ssh-keyscan -t rsa 1.0.1.13 > /root/.ssh/known_hosts
+ssh -4 -vNR 9000:127.0.0.1:8080 exam_user@1.0.1.13 &

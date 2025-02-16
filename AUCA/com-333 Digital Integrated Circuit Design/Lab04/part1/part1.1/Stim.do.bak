@@ -1,0 +1,4 @@
+force clk 0 0ns, 1 {100ns} -repeat 200ns;
+force s 0 0ns, 1 400ns;
+force r 1 0ns, 0 400ns;
+force d 10#1 0ns, 10#2 100ns, 10#3 200ns, 10#4 300ns;

@@ -1,0 +1,13 @@
+import java.util.*;
+
+public class Problem1099 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int a = input.nextInt();
+		for (int i=0; i<a; ++i) {
+			int b = input.nextInt();
+			
+		}
+	}
+}

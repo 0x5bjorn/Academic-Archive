@@ -1,0 +1,121 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+import java.util.*;
+
+public class GUI extends JFrame {
+	ArrayList<Figure> figures = new ArrayList<>();
+	CanvasPanel canvasPanel = new CanvasPanel();
+	JPanel controlPanel = new JPanel();
+
+	JButton restart = new JButton("Restart");
+	JButton[][] buttons = new JButton[4][4];
+	JButton shuffle = new JButton("Shuffle");
+	
+	Figure selectedFigure = null;
+
+	GUI() {
+		add(canvasPanel);
+		canvasPanel.setFocusable(true);
+		canvasPanel.addKeyListener(new PanelKeyListener());
+		canvasPanel.addMouseListener(new PanelMouseListener());
+		
+		controlPanel.setBackground(Color.GRAY);
+		controlPanel.add(restart);
+		controlPanel.add(shuffle);
+		add(controlPanel, BorderLayout.SOUTH);
+		restart.addActionListener(new ButtonListener());
+		shuffle.addActionListener(new ButtonListener()); 
+		for (int i = 0; i<4; ++i) {
+			for (int j = 0; j<4; ++j) {
+				buttons[i][j].setSize(150,150);
+			    buttons[i][j].setLocation(150*j,150*i);
+			    add(buttons[i][j])
+			}
+		}
+
+	}
+
+	public static void main(String[] args) {
+		GUI frame = new GUI();
+		frame.setTitle("Puzzle 15");
+		frame.setSize(600, 600);
+		frame.setLocationRelativeTo(null);
+		frame.setBackground(Color.BLACK);
+		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		frame.setVisible(true);
+	}
+
+	class CanvasPanel extends JPanel {
+
+		@Override
+		protected void paintComponent(Graphics g) {
+			super.paintComponent(g);
+
+			int dw = getWidth() / 4;
+			int dh = getHeight() / 4;
+
+			Graphics2D g2 = (Graphics2D) g;
+			for (int i = 0; i < 4; ++i) {
+				for (int j = 0; j < 4; ++j) {
+					g2.setStroke(new BasicStroke(3));
+					g2.setColor(Color.RED);
+					g2.drawRect(dw*j, dh*i, dw, dh);
+				}
+			}
+
+//			for (Figure r : figures) {
+//				r.draw(g);
+//				figures.add(new Rect(dw * j, dh * i, dw, dh));
+//				repaint();
+//			}
+		}
+	}
+
+	class PanelKeyListener extends KeyAdapter {
+
+		// @Override
+		// public void keyPressed(KeyEvent e) {
+		// if (e.getKeyCode() == KeyEvent.VK_UP) {
+		// rect.moveUp();
+		// } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+		// rect.moveDown();
+		// }
+		//
+		// if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+		// rect.moveRight();
+		// } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+		// rect.moveLeft();
+		// }
+		// repaint();
+		// }
+	}
+
+	class PanelMouseListener extends MouseAdapter {
+
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			for (Figure r : figures) {
+				if (r.contains(e.getX(), e.getY())) {
+					if (selectedFigure != null) {
+						selectedFigure.setSelected(false);
+					}
+					r.setSelected(true);
+					selectedFigure = r;
+					repaint();
+					break;
+				}
+			}
+		}
+	}
+	
+	class ButtonListener implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			
+		}
+		
+	}
+}

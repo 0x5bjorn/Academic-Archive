@@ -1,0 +1,34 @@
+# Loading project test
+# Compile of ExclusiveOR.v was successful.
+vsim work.ExclusiveOR -t ps
+# vsim work.ExclusiveOR -t ps 
+# Start time: 14:42:49 on Apr 29,2020
+# Loading work.ExclusiveOR
+add wave sim:/ExclusiveOR/*
+do {/home/tyto5/tyto/Courses/com-333 DICD/Stimul.do}
+run -all
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+quit -sim
+# End time: 16:08:42 on Apr 29,2020, Elapsed time: 1:25:53
+# Errors: 0, Warnings: 1
+# Load canceled
+# reading /home/tyto5/intelFPGA_lite/19.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project Lab01
+# Compile of mult_acc.v was successful.
+# Load canceled
+# Load canceled
+# Compile of mult_acc.v was successful.
+vsim -t ps work.mult_acc
+# vsim -t ps work.mult_acc 
+# Start time: 19:45:16 on Apr 29,2020
+# Loading work.mult_acc
+add wave sim:/mult_acc/*
+run -all
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+do {/home/tyto5/tyto/Courses/com-333 DICD/Lab01/Stim.do}
+run -all
+# Break key hit
+# Break in Module mult_acc at /home/tyto5/tyto/Courses/com-333 DICD/Lab01/mult_acc.v line 34
+quit -sim
+# End time: 20:19:28 on Apr 29,2020, Elapsed time: 0:34:12
+# Errors: 0, Warnings: 1

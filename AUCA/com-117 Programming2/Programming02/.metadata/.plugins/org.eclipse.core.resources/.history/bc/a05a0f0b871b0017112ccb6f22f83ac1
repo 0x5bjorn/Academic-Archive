@@ -1,0 +1,57 @@
+import java.util.*;
+
+public class BigInt {
+	private ArrayList<Integer> digits;
+
+	public BigInt(String number) throws Exception {
+		digits = new ArrayList<Integer>();
+		for (int i = 0; i < number.length(); ++i) {
+			char c = number.charAt(i);
+			if (c < '0' || c > '9') { // !(Character.parseInt(number))
+				throw new Exception("incorrect Big Int: " + number);
+			}
+			digits.add(c - '0');
+			// digits.add(Integer.parseInt(substring(i, i+1)));
+		}
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder r = new StringBuilder();
+		for (Integer d : digits) {
+			r.append(d);
+		}
+		return r.toString();
+	}
+
+	public BigInt add(BigInt other) throws Exception {
+		BigInt r = new BigInt("0");
+		r.digits.remove(0);
+
+		int i = digits.size() - 1;
+		int j = other.digits.size() - 1;
+
+		int carry = 0;
+		while (i > -1 || j > -1 || carry != 0) {
+			int s = carry;
+			if (i > -1) {
+				s += digits.get(i);
+				--i;
+			}
+			if (i > -1) {
+				s += other.digits.get(j);
+				--j;
+			}
+			carry = s / 10;
+			int d = s % 10;
+			r.digits.add(0, d);
+		}
+		return r;
+	}
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		BigInt a = new BigInt(scan.nextLine());
+		BigInt b = new BigInt(scan.nextLine());
+	}
+}
